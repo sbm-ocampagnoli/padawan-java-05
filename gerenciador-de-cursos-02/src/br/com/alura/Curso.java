@@ -54,5 +54,20 @@ public class Curso {
 	public Set<Aluno> getAlunos() {
 		return Collections.unmodifiableSet(alunos);
 	}
-
+	
+	public boolean estaMatriculado(Aluno aluno) {
+	    return this.alunos.contains(aluno);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+	    Aluno outroAluno = (Aluno) obj;
+	    return this.nome.equals(outroAluno.getNome());
+	}
+	
+	@Override
+	public int hashCode(){
+	    return this.nome.hashCode();
+	}
+	
 }
