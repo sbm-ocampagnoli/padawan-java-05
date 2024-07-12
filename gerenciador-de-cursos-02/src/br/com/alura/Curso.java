@@ -13,7 +13,7 @@ public class Curso {
 	private Set<Aluno> alunos = new HashSet<>();
 
 	public Curso(String nome, String instrutor) {
-		this.nome = nome;	
+		this.nome = nome;
 		this.instrutor = instrutor;
 	}
 
@@ -54,20 +54,20 @@ public class Curso {
 	public Set<Aluno> getAlunos() {
 		return Collections.unmodifiableSet(alunos);
 	}
-	
+
 	public boolean estaMatriculado(Aluno aluno) {
-	    return this.alunos.contains(aluno);
+		return this.alunos.contains(aluno);
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
-	    Aluno outroAluno = (Aluno) obj;
-	    return this.nome.equals(outroAluno.getNome());
+		Aluno outroAluno = (Aluno) obj;
+		return this.nome.equals(outroAluno.getNome());
 	}
-	
+
 	@Override
-	public int hashCode(){
-	    return this.nome.hashCode();
+	public int hashCode() {
+		return this.nome.hashCode();
 	}
-	
+
 }
